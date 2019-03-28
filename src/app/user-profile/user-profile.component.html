@@ -1,0 +1,13 @@
+<p>
+  <img [src]="User.photo" [alt]="User.name"/><br>
+  Nom : {{User.name}}<br>
+  Prénom : {{User.firstName}} <br>
+  
+</p>
+<p>
+  {{User.quote}}<br>
+  <input type="text" [(ngModel)]="User.quote" placeholder="Tapez votre citation"><br>
+</p>
+
+<button (click)="User.hide = !User.hide">Afficher/Masquer mon âge</button> <!-- qd on click, user qui es True devient False et inversement, ce qui le fait apparaitre et disparaitre-->
+<p [hidden]="User.hide"> {{User.age}} ans</p>
