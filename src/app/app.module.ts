@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { LightDirective } from './light.directive';
+import { ShowMoviesDirective } from './show-movies.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
     SignUpComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    LightDirective,
+    ShowMoviesDirective
   ],
   imports: [
     BrowserModule,

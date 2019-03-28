@@ -15,3 +15,12 @@
   <app-user-profile></app-user-profile>
   
   <router-outlet></router-outlet>
+
+  <ul *appShowMovies="displayMovies">
+    <!-- <li [ngClass]="{'first' :isTheFirstElement}">Stargate</li>  -->
+    <!-- 'first ' appele la class dans app.scss ET isTheFirstElement est appeler dans app.ts -->
+    <li appLight>Avengers</li>
+    <li>Les gendarmes a St Tropez</li>
+    <li>47 Ronin</li>
+    <li>Stargate</li>
+  </ul>

@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Tour of Heroes';
+
+  // isTheFirstElement : boolean = true;
+
+  displayMovies : boolean = true; // true fait apparaitre la liste dans app.html, et false la fait disparaitre
 }

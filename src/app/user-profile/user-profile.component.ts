@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { userInfo } from 'os';
-import { attachEmbeddedView } from '@angular/core/src/view';
-import { Agent } from 'https';
 
 @Component({
   selector: 'app-user-profile',
