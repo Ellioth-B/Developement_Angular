@@ -9,6 +9,10 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LightDirective } from './light.directive';
 import { ShowMoviesDirective } from './show-movies.directive';
+import { MenuComponent } from './menu/menu.component';
+
+import { RouterModule } from '@angular/router';
+import { routes } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,14 @@ import { ShowMoviesDirective } from './show-movies.directive';
     SignUpComponent,
     UserProfileComponent,
     LightDirective,
-    ShowMoviesDirective
+    ShowMoviesDirective,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule // ajout de FormsModule
+    FormsModule, // ajout de FormsModule
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
