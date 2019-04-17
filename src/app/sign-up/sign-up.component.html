@@ -1,4 +1,32 @@
 <h1>
   Saisie ton mail !!
 </h1>
-<input type="email" name="email" placeholder="@example"/>
+<form (ngSubmit) = "onSubmit(form)" #form="ngForm">
+  
+  <div>
+    <label for="email">Email : </label>
+    <input type="email" name="email" [(ngModel)]="model.email" #email="ngModel" placeholder="@example" required email/>
+  </div>
+
+  <div *ngIf="form.submitted">
+  <div *ngIf="email.errors">
+    <span *ngIf="email.errors.required">Le champ email est requis</span>
+    <span *ngIf="email.errors.email">Le champ email est invalide</span>
+  </div>
+</div><br>
+  
+  <div>
+    <label for="user">Utilisateur : </label>
+    <input type="text" name="user" [(ngModel)]="model.user" #user="ngModel" required minlength="4" maxlength="25">
+  </div>
+
+  <div *ngIf="form.submitted">
+  <div *ngIf="user.errors">
+    <span *ngIf="user.errors.required">Le champ user est requis</span>
+    <span *ngIf="user.errors.minlength">Le champ user doit dépasser 4 caractères</span>
+    <span *ngIf="user.errors.maxlength">Le champ user ne doit pas dépasser 25 caractères</span>
+  </div> 
+  </div>
+  <button type="submit">Envoie user</button>
+  
+</form>
